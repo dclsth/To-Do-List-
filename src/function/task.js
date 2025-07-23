@@ -1,7 +1,9 @@
-export default function Task({taskname, time}) {
+//import "../App.css";
+
+export default function Task({taskNm, time}) {
   return (
-    <div className="task">
-    <h1>Task: {taskname} </h1>
+    <div className="result">
+    <h1>Task: {taskNm} </h1>
     <h1>Time to Complete: {time} </h1>
     </div>
   );

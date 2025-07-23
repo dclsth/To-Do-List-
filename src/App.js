@@ -1,26 +1,36 @@
 import { useState } from 'react';
 import Task from "./function/task.js";
+ import "./App.css";
+
 
 function App() {
 
-  const [taskname, settaskname] = useState("");
+  const [taskNm, settaskNm] = useState("");
   const [time, settime] = useState("");
   const [tasklist, settasklist] = useState([]);
   const addtask = () => {
-    settasklist([...tasklist, { task: taskname, time: time }]);
-    settaskname("");
+    settasklist([...tasklist, { taskN: taskNm, time: time }]);
+    settaskNm("");
     settime("");
   };
 
-  return (
-    <div className="App">
 
+
+
+
+  return (
+  
+  <div className="App">
+     
+
+  <div className="input"> 
+  <h1> My To Do List! </h1>      
       <label>Task: </label>
 
       <br />
 
       <input type="text" id="task" 
-      onChange = {(e) => {settaskname(e.target.value)
+      onChange = {(e) => {settaskNm(e.target.value)
       }}/>
 
       <br />
@@ -29,22 +39,27 @@ function App() {
 
       <br />
 
-      <input type="text" id="time"
+      <input type="text" id="time"  
       onChange = {(e) => {settime(e.target.value)
       }}/>
 
       <br />
 
-      <input type="submit" onClick = {addtask} />
+      <button onClick = {addtask} > Add Task! </button>
+  </div>
 
-      {tasklist.map((task) => {
-        return <Task taskname={task.task} time={task.time} />
+  <div>
+      {tasklist.map((taskN) => {
+    
+    
+        return <Task taskNm={taskN.taskN} time={taskN.time} />  
+
+        /* taskN yang menyimpan seluruh objek, maka dari itu nyari time harus melalui taskN*/
       })} 
+  </div>
+    
+  </div>
 
-     
-
-
-    </div>
   );
 }
 

@@ -1,0 +1,44 @@
+
+body {
+    background-color: pink;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.App {
+    
+   font-size: 1.25em;
+   text-align: center;
+   height: 93vh;
+   margin: 0;
+}
+
+input{
+    margin: 10px;
+    height: 20px;
+   
+}
+
+button {
+    text-decoration: none;
+    border-color: rgb(32, 31, 31);
+    padding: 10px;
+    font-size: 0.8em;
+    border-radius: 10px;;
+    background-color: rgb(230, 134, 150);
+    box-shadow: 5px 5px rgb(95, 95, 95);
+    margin-top: 10px;
+
+}
+
+.result {
+    display: inline-block;
+    margin: 10px;
+    border: solid 2px black;
+    padding: 0px 20px 0px 22px;
+    max-width: fit-content;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 50px;
+
+}
+
